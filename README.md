@@ -10,22 +10,22 @@ This project demonstrates how to prepare a dataset, train a YOLOv8 model, and cr
 
 ## 1. Dataset Preparation
 
-### XML to YOLO Format
+### 1.1 XML to YOLO Format
 
 - **Script**: `xml_to_txt.py`
 - **Description**: Converts XML annotations from the Kaggle dataset ([PCB Defects Dataset](https://www.kaggle.com/datasets/akhatova/pcb-defects/data)) into the text format required by YOLOv8.
-- Download the dataset inside the Project folder and unzip folder ( name directory as PCB_Dataset).
-- **Command Used**:
+- Download the dataset inside the Project folder and unzip folder (name directory as PCB_Dataset).
+- **Command Used**: Run following command to generate .txt files
   ```bash
     python xml_to_txt.py
 
 - **Output** : It will generate /Input_Data folder with all labels .txt files for YOLO input.
 
-### Data Splitting
+### 1.2 Data Splitting
 
 - **Script**: `data.py`
 - **Description**: Splits the dataset into training, validation, and test sets in YOLO format.
-- **Command Used**:
+- **Command Used**: Run following command to generate dataset files for YOLO input.
   ```bash
     python data.py
 - **Output** : It will generate /dataset folder with 2 subfolders images and label
@@ -44,7 +44,7 @@ This project demonstrates how to prepare a dataset, train a YOLOv8 model, and cr
     ```
 
 
-### Dataset YAML Configuration
+### 1.3 Dataset YAML Configuration
 
 - **File**: `dataset.yaml`
 - **Description**: Specifies the directory structure and class names for YOLOv8.
